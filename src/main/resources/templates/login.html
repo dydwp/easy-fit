@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>로그인 - EasyFit</title>
+<link rel="stylesheet" th:href="@{/css/style.css}">
+<style>
+	.login-wrap {
+		min-height: 80vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.login-box {
+		width: 100%;
+		max-width: 360px;
+		text-align: center;
+		padding: 40px 32px;
+		border-radius: 16px;
+		background: rgba(255, 255, 255, 0.04);
+		border: 1px solid rgba(255, 255, 255, 0.08);
+	}
+	.login-box h2 { margin-bottom: 8px}
+	.login-box p {margin-bottom: 28px; opacity: 0.7; font-size: 14px; }
+	.social-btn {
+		display: flex;
+		align-items: conter;
+		justify-content: center;
+		gap: 8px;
+		width: 100%;
+		padding: 14px;
+		margin-bottom: 12px;
+		border-radius: 10px;
+		font-weight: 700;
+		font-size: 15px;
+		border: none;
+		cursor: pointer;
+		text-decoration: none;
+	}
+	.social-btn.google { background: #fff; color: #1f1f1f; }
+	.social-btn.google:hover { background: #f2f2f2 }
+	.social-btn.kakao { background: #FEE500; color: #191919 }
+	.social-btn.kakao:hover { background: #f5da00 }
+</style>
+</head>
+<body>
+	<div th:replace="~{fragments/nav :: nav('login')}"></div>
+	
+	<div class="login-wrap">
+		<div class="login-box">
+			<h2>EasyFit 로그인</h2>
+			<p>소셜 계정으로 간편하게 시작하세요</p>
+			
+			<a class="social-btn google" href="/oauth2/authorization/google">Google로 계속하기</a>
+			<a class="social-btn kakao" href="/oauth2/authorization/kakao">카카오로 계속하기</a>
+		</div>
+	</div>
+</body>
+</html>

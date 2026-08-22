@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>운동 가이드 - EastFit</title>
+<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+	<div th:replace="~{fragments/nav :: nav('guide')}"></div>
+	
+	<div class="page-header">
+		<h2>운동 가이드</h2>
+		<p>부위를 선택하고 카드를 눌러 자세한 방법을 확인하세요.</p>
+	</div>
+	
+	<div class="tabs" id="tabs-container"></div>
+	
+	<div class="workout-grid" id="workout-grid"></div>
+	
+	<script th:src="@{/js/guide.js}"></script>
+</body>
+</html>	

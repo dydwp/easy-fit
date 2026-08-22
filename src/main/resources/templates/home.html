@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EasyFit</title>
+<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+	<div th:replace="~{fragments/nav :: nav('home')}"></div>
+
+	<div class="page active">
+		<div class="hero">
+			<div class="hero-bg"></div>
+			<div class="hero-grid"></div>
+			<div class="hero-content">
+				<span class="hero-badge">FOR BEGINNERS · FREE · NO LOGIN</span>
+				<h1>
+					당신의 첫 운동<br>
+					<span>EasyFit</span>이 함께
+				</h1>
+				<p class="hero-sub">
+					어떤 운동을 해야 할지 막막한 당신을 위해.<br>오늘도 수고했어요, 당신의 첫 운동을 응원합니다.
+				</p>
+				<div class="hero-btns">
+					<button class="btn-primary" onclick="location.href='guide'">운동 가이드 보러가기</button>
+					<button class="btn-secondary" onclick="location.href='calendar'">내 캘린더 확인하기</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="home-features">
+			<div class="feat-card">
+				<div class="feat-icon">💪</div>
+				<h3>운동 가이드</h3>
+				<p>부위별 운동 방법을 GIF와 함께 쉽게 배울 수 있어요.</p>
+			</div>
+			<div class="feat-card">
+				<div class="feat-icon">📅</div>
+				<h3>나만의 캘린더</h3>
+				<p>운동한 날 스탬프를 찍어 성취감을 느끼세요.</p>
+			</div>
+			<div class="feat-card">
+				<div class="feat-icon">🗄️</div>
+				<h3>DB에 안전하게 저장</h3>
+				<p>운동 기록과 메모가 서버 DB에 저장돼요.</p>
+			</div>
+		</div>
+	</div>
+	<script th:src="@{/js/common.js}"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>캘린더 - EasyFit</title>
+<link rel="stylesheet" th:href="@{/css/style.css}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	<div th:replace="~{fragments/nav :: nav('calendar')}"></div>
+	
+	<div class="page-header">
+		<h2>나만의 캘린더</h2>
+		<p>운동한 날 스탬프를 찍고, 부위 이모지와 메모를 남겨보세요.</p>
+	</div>
+	
+	<div class="calendar-wrap">
+		<div class="cal-card">
+			<div class="cal-nav">
+				<button class="cal-arrow" onclick="changeMonth(-1)">&#8249;</button>
+				<div class="cal-title" id="cal-title"></div>
+				<button class="cal-arrow" onclick="changeMonth(1)">&#8250;</button>
+			</div>
+			<div class="cal-weekdays">
+				<span>일</span>
+				<span>월</span>
+				<span>화</span>
+				<span>수</span>
+				<span>목</span>
+				<span>금</span>
+				<span>토</span>
+			</div>
+			<div class="cal-days" id="cal-days"></div>
+		</div>
+		
+		<div class="memo-card">
+			<div class="memo-date-label">선택된 날짜</div>
+			<div class="memo-selected-date" id="selected-date-label">날짜를 선택하세요.</div>
+			<button class="memo-stamp-btn" id="stamp-btn" onclick="toggleStamp()" disabled>오운완 스탬프 찍기 ✓</button>
+
+			<div class="part-picker-label">오늘 한 운동 부위 (여러 개 선택 가능)</div>
+			<div class="part-picker" id="part-picker"></div>
+
+			<textarea class="memo-textarea" id="memo-input" placeholder="오늘 한 운동을 짧게 적어보세요&#10예) 스쿼트 50회, 푸시업 30회"></textarea>
+			<button class="memo-save-btn" onclick="saveMemo()">💾 저장하기</button>
+			<div class="streak-bar">
+				<div class="streak-label">🔥 이번 달 최장 연속 운동</div>
+				<span class="streak-count" id="streak-count">0</span>
+				<span class="streak-unit">일</span>
+			</div>
+		</div>
+	</div>
+	
+	<script th:src="@{/js/calendar.js}"></script>
+</body>
+</html>
