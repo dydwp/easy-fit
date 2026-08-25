@@ -217,3 +217,8 @@ DESC calendar_record;
 DESC workout;
 DESC body_part_category;
 SELECT body_part, COUNT(*) FROM workout GROUP BY body_part;
+
+
+SELECT DATABASE();
+SELECT COUNT(*) FROM body_part_category;
+SELECT COUNT(*) FROM workout;
