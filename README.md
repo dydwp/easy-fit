@@ -30,4 +30,4 @@
 
 ## 🚀 실행
 
-🔗 https://easy-fit-xxxx.onrender.com
+🔗 https://easy-fit.onrender.com
