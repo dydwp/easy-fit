@@ -33,13 +33,13 @@ public class Workout {
 	@Column(length = 100)
 	private String tags;
 	
-	@Lob
+	@Column(columnDefinition = "TEXT")
 	private String pose;
 	
 	@Column(name = "target_muscle", length = 200)
 	private String targetMuscle;
 	
-	@Lob
+	@Column(columnDefinition = "TEXT")
 	private String caution;
 	
 	@Column(name = "video_url", length = 500)
