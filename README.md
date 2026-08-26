@@ -88,7 +88,7 @@ KAKAO_CLIENT_SECRET=your_kakao_client_secret
 
 **배포 링크(포트폴리오용)**
 
-🔗 https://easy-fit-xxxx.onrender.com _(배포 후 실제 주소로 교체 예정)_
+🔗 https://easy-fit.onrender.com
 
 **로컬에서 직접 실행하고 싶다면**
 
